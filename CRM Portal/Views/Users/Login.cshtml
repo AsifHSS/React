@@ -1,0 +1,53 @@
+﻿@model CRM_Portal.Models.Users
+@{
+}
+
+<br />
+<h2>Login</h2>
+<hr />
+<form asp-action="Login">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="offset-md-2 col-md-4">
+        <div class="form-group">
+            <label asp-for="Username" class="control-label"></label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Login" class="btn btn-primary" />
+            <a type="botton" href="@Url.Action("Create","Users")" class="btn btn-primary">New User</a>
+        </div>
+      
+        </div>
+</form>
+
+<!--<form method="POST">
+    <div class="row">
+        <div class="offset-sm-2 col-sm-3 ">
+            <label class="col-form-label">Username</label>
+
+            @Html.TextBoxFor(model => model.Username, new { @class = "form-controls" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=" offset-sm-2 col-sm-3 ">
+            <label class="col-form-label">Password</label>
+
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-controls" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=" offset-sm-2 col-sm-3 ">-->
+            @*<label class="col-form-label">Password</label>*@
+
+            <!--<button type="submit" class="btn btn-primary">Login</button>
+            <a type="botton" href="@Url.Action("Create","Users")" class="btn btn-primary">New User</a>
+        </div>
+    </div>
+</form>-->
